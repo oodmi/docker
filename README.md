@@ -1,12 +1,12 @@
-# dockerForJava
+# Docker Conrtainer
 
-parant docker container for deploy java application
+Parent docker container for deploy java application
 
 ### Getting Started
 
-You cat build your own images
+You can build your own image
 
-* git clone https://github.com/oodmi/dockerForJava.git
+* git clone https://github.com/oodmi/docker.git
 * docker build -t TARGET_IMAGE[:TAG] .
 * docker push TARGET_IMAGE[:TAG]
 
