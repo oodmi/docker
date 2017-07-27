@@ -1,0 +1,20 @@
+FROM openjdk:alpine
+
+ENV MEMORY_MIN 512m
+ENV MEMORY_MAX 512m
+ENV GC_TYPE UseG1GC
+ENV JAVA_OPTS ""
+ENV VM_DEBUG false
+
+ENV SERVER_PORT 8080
+ENV JMX_PORT 8081
+
+ENV TZ "Europe/Moscow"
+ENV PROFILES "dev"
+
+COPY ./docker-entrypoint.sh /
+
+EXPOSE $SERVER_PORT
+EXPOSE $JMX_PORT
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
